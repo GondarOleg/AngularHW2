@@ -1,8 +1,7 @@
 
 
 
-
-function* generate(start_param, step_param) {
+function* sequence(start_param, step_param) {
     [start = 0, step = 1] = [start_param, step_param];
     while(true)
     {
@@ -11,8 +10,8 @@ function* generate(start_param, step_param) {
 
 }
 
-function checkGenerator(timesToLog, generator){
-    if(generator instanceof generate){
+function checkGenerator(timesToLog, sequence){
+    if(generator instanceof sequence){
     for(i = 0; i<timesToLog; i++){
         console.log(generator.next().value);
     }
@@ -21,11 +20,11 @@ function checkGenerator(timesToLog, generator){
     }
 }
 
-let g1 = generate();
+let g1 = sequence();
 
 checkGenerator(5, g1);
 
-let g2 = generate(2, 5);
+let g2 = sequence(2, 5);
 
 let g3 = checkGenerator(5, g2);
 
