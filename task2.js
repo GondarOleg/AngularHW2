@@ -20,3 +20,5 @@ function generateMass(size, start, step) {
 }
 
 console.log(generateMass());
+console.log(generateMass(5));
+console.log(generateMass(5,5,5));

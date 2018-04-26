@@ -1,6 +1,4 @@
 
-
-
 function* sequence(start_param, step_param) {
     [start = 0, step = 1] = [start_param, step_param];
     while(true)
@@ -10,10 +8,10 @@ function* sequence(start_param, step_param) {
 
 }
 
-function checkGenerator(timesToLog, sequence){
-    if(generator instanceof sequence){
+function checkGenerator(timesToLog, seq){
+    if(seq instanceof sequence){
     for(i = 0; i<timesToLog; i++){
-        console.log(generator.next().value);
+        console.log(seq.next().value);
     }
     }else{
         alert("Неправильный фоторой параметр!!!");
